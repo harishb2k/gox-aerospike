@@ -33,6 +33,10 @@ func (context *Context) InitDatabase() (err error) {
 
         client, err := aerospike.NewClient(context.HostList, context.Port)
         if err != nil {
+            err = &errors.ErrorObj{
+                Name: "failed_to_open_connection",
+                Err:  err,
+            }
         } else {
             context.Client = client;
         }
@@ -60,7 +64,7 @@ func (context *Context) FindOne(queryString string, mapper db.RowMapper, val ...
             Description: fmt.Sprintf("Failed to create new key [%s]", base.Stringify(val[0])),
         }
     } else {
-        if record, err := context.Client.Get(nil, key); err == nil {
+        if record, err := context.Client.Get(nil, key); err != nil {
             e = &errors.ErrorObj{
                 Name:        db.DatabaseErrorRecordNotFound,
                 Err:         err,
