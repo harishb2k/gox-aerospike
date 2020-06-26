@@ -12,11 +12,20 @@ import "github.com/harishb2k/gox-base"
 
 type Context struct {
     Client   *aerospike.Client;
-    HostList string
+    HostList []string
     Port     int
     Keyspace string
     onlyOnce sync.Once
     *base.ApplicationContext
+}
+
+func (c *Context) getHosts() (hosts []*aerospike.Host) {
+    hosts = make([]*aerospike.Host, 0, 10)
+    for _, h := range c.HostList {
+        host := aerospike.NewHost(h, c.Port)
+        hosts = append(hosts, host)
+    }
+    return
 }
 
 func New(context *Context) (idb db.IDb, err error) {
@@ -31,7 +40,7 @@ func New(context *Context) (idb db.IDb, err error) {
 func (context *Context) InitDatabase() (err error) {
     context.onlyOnce.Do(func() {
 
-        client, err := aerospike.NewClient(context.HostList, context.Port)
+        client, err := aerospike.NewClientWithPolicyAndHost(nil, context.getHosts()...)
         if err != nil {
             err = &errors.ErrorObj{
                 Name: "failed_to_open_connection",
