@@ -40,8 +40,8 @@ github.com/google/go-cmp v0.3.1/go.mod h1:8QqcDgzrUqlUb/G2PQTWiueGozuR1884gddMyw
 github.com/google/go-cmp v0.4.0 h1:xsAVV57WRhGj6kEIi8ReJzQlHHqcBYCElAvkovg3B/4=
 github.com/google/go-cmp v0.4.0/go.mod h1:v8dTdLbMG2kIc/vJvl+f65V22dbkXbowE6jgT/gNBxE=
 github.com/google/gofuzz v1.0.0/go.mod h1:dBl0BpW6vV/+mYPU4Po3pmUjxk6FQPldtuIdl/M65Eg=
-github.com/harishb2k/gox-base v0.0.5 h1:t1YxhQdKE1IPB/JJoFsFoeffA9YU21WCfzdmFULVPv4=
-github.com/harishb2k/gox-base v0.0.5/go.mod h1:8mGv5zlm1FKv955DAItH4b8VMSW16rIUhfeHanyuGEw=
+github.com/harishb2k/gox-base v0.0.6 h1:zkj+BHkLS4TuWLq9ckKta0Dp81yFuoYHi6yoam6TSgw=
+github.com/harishb2k/gox-base v0.0.6/go.mod h1:8mGv5zlm1FKv955DAItH4b8VMSW16rIUhfeHanyuGEw=
 github.com/harishb2k/gox-db v0.0.4 h1:pa6HoH+ZNeN2RPM/+s4s6GRJiqktaq1/D3VpV7Hy36E=
 github.com/harishb2k/gox-db v0.0.4/go.mod h1:igeNDe+PjmB7ej46ZXSr3ZIRr1sI9yEooyFfAnRCfZY=
 github.com/harishb2k/gox-errors v0.0.4 h1:2QGHKAmrucafp5dazyjDPJRHtEI+Cf6/zZC27+aRQ6M=

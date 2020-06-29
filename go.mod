@@ -4,7 +4,7 @@ go 1.13
 
 require (
 	github.com/aerospike/aerospike-client-go v3.0.1+incompatible
-	github.com/harishb2k/gox-base v0.0.5
+	github.com/harishb2k/gox-base v0.0.6
 	github.com/harishb2k/gox-db v0.0.4
 	github.com/harishb2k/gox-errors v0.0.4
 	github.com/onsi/ginkgo v1.13.0 // indirect
